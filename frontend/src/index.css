@@ -1,0 +1,103 @@
+:root {
+  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Light Theme Colors */
+  --bg-gradient: linear-gradient(135deg, #f0f4fd 0%, #e5ecfb 50%, #e2eafc 100%);
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-border: rgba(255, 255, 255, 0.6);
+  --card-shadow: 0 10px 30px -5px rgba(0, 32, 128, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+  
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --primary-light: rgba(79, 70, 229, 0.1);
+  
+  --success: #10b981;
+  --success-bg: rgba(16, 185, 129, 0.1);
+  --warning: #f59e0b;
+  --warning-bg: rgba(245, 158, 11, 0.1);
+  --danger: #ef4444;
+  --danger-bg: rgba(239, 68, 68, 0.1);
+  --info: #3b82f6;
+  --info-bg: rgba(59, 130, 246, 0.1);
+  
+  --input-bg: #ffffff;
+  --input-border: #e2e8f0;
+  --input-focus: #4f46e5;
+
+  --badge-low-bg: #e0f2fe;
+  --badge-low-text: #0369a1;
+  --badge-medium-bg: #fef3c7;
+  --badge-medium-text: #b45309;
+  --badge-high-bg: #ffe4e6;
+  --badge-high-text: #be123c;
+}
+
+[data-theme='dark'] {
+  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+  --card-bg: rgba(30, 41, 59, 0.75);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --card-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.4), 0 5px 15px -2px rgba(0, 0, 0, 0.2);
+  
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-light: #64748b;
+  
+  --primary: #6366f1;
+  --primary-hover: #818cf8;
+  --primary-light: rgba(99, 102, 241, 0.2);
+  
+  --input-bg: rgba(15, 23, 42, 0.6);
+  --input-border: #334155;
+  --input-focus: #818cf8;
+
+  --badge-low-bg: rgba(3, 105, 161, 0.25);
+  --badge-low-text: #7dd3fc;
+  --badge-medium-bg: rgba(180, 83, 9, 0.25);
+  --badge-medium-text: #fde047;
+  --badge-high-bg: rgba(190, 18, 60, 0.25);
+  --badge-high-text: #fda4af;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  transition: background 0.3s ease;
+}
+
+#root {
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
